@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>To-Do List & Meeting Planner</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>📅 To-Do List & Meeting Planner</h1>
+
+      <div class="card">
+        <h2>Add Task</h2>
+        <div class="form-row">
+          <input id="taskTitle" type="text" placeholder="Task Title" />
+          <input id="taskDate" type="date" lang="en-GB" />
+          <button onclick="addTask()">Add Task</button>
+        </div>
+      </div>
+
+      <h2>Tasks</h2>
+      <div id="taskList"></div>
+
+      <div class="card">
+        <h2>Calendar</h2>
+        <div id="calendar"></div>
+      </div>
+    </div>
+
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">×</span>
+        <h3>Create Meeting</h3>
+
+        <input id="meetingTitle" type="text" />
+        <input id="meetingDate" type="date" lang="en-GB" />
+        <div class="time-picker">
+          <select id="hour"></select>
+          <select id="minute"></select>
+          <select id="ampm">
+            <option>AM</option>
+            <option>PM</option>
+          </select>
+        </div>
+        <input
+          id="meetingAttendees"
+          type="text"
+          placeholder="Attendees (comma separated)"
+        />
+
+        <button onclick="saveMeeting()">Save Meeting</button>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
