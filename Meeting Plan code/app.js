@@ -71,7 +71,7 @@ function saveMeeting() {
   const div = document.createElement("div");
   div.className = "meeting";
 
-  div.innerHTML = `📌 Meeting: ${title} on ${formatDate(date)} at ${time} with yourmail@gmail.com`;
+  div.innerHTML = `📌 Meeting: ${title} on ${formatDate(date)} at ${time} with ${attendees}`;
 
   calendar.appendChild(div);
 
